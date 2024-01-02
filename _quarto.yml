@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "science-ouverte"
+  navbar:
+    left: 
+      - articles.qmd
+      - ressources.qmd
+
+  page-footer:
+    right:
+      - icon: github
+        href: https://github.com/lucasvoirin/science-ouverte
+        
+format:
+  html:
+    theme: yeti
+    css: styles.css
+    
+language:
+  search-detached-cancel-button-title: "Annuler"
+  search-label: "Rechercher"
+  search-matching-documents-text: "résultat(s)"
+  search-no-results-text: "Pas de résultat"
+  search-submit-button-title: "Soumettre"
+
+editor: visual
+

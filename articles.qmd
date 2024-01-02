@@ -1,0 +1,16 @@
+---
+title: "Articles"
+listing:
+  contents: articles
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
+language: 
+  listing-page-field-categories: Catégories
+  listing-page-category-all: Toutes 
+date-format: "DD/MM/YYYY"
+---

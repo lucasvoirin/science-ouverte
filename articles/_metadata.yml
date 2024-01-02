@@ -1,0 +1,33 @@
+# options specified here will apply to all posts in this folder
+
+# freeze computational output
+# (see https://quarto.org/docs/projects/code-execution.html#freeze)
+freeze: true
+
+# Enable banner style title blocks
+title-block-banner: true
+
+# Author name of all blog posts
+author: 'Lucas'
+
+# Language options
+language:
+  title-block-published: "Publié le" 
+  title-block-author-single: "Auteur"
+  section-title-references: "Références"
+  title-block-modified: "Modifié le"
+  copy-button-tooltip: "Copier dans le presse-papier"
+  copy-button-tooltip-success: "Copié !"
+  
+# Date format
+date-format: "DD/MM/YYYY"
+
+# Comments settings
+comments:
+    giscus:
+      repo: lucasvoirin/science-ouverte
+      language: fr
+      
+format:
+  html:
+    include-after-body: ../objects/footer.html
