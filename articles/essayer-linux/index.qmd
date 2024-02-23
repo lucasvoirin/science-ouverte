@@ -1,0 +1,15 @@
+---
+title: "Essayer Linux"
+author: "Lucas"
+date: "2024-02-23"
+date-modified: "2024-02-23"
+categories: [informatique, linux]
+---
+
+## Sans rien installer sur son ordinateur
+
+[Distrosea](https://distrosea.com/)
+
+## En installant une machine virtuelle
+
+[VirtualBox](https://www.virtualbox.org/)
