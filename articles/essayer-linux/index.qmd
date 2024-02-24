@@ -12,7 +12,7 @@ Il existe des centaines de distributions Linux. Avant de se lancer, c'est rassur
 
 [![](distrosea.png){fig-align="\"center"}](https://distrosea.com/)
 
-[Distrosea](https://distrosea.com/) est un site web proposant de d'essayer facilement différentes distributions Linux. Le site propose toutes les distributions les plus utilisées (Ubuntu, Linux Mint, Debian, Fedora...) et permet de se connecter à distance à un ordinateur sous Linux. L'utilisation est très simple : il suffit de cliquer sur le logo de la distribution. Même pas besoin de créer un compte utilisateur !
+[Distrosea](https://distrosea.com/) est un site web proposant d'essayer facilement différentes distributions Linux. Le site propose toutes les distributions les plus utilisées (Ubuntu, Linux Mint, Debian, Fedora...) et permet de se connecter à distance à un ordinateur sous Linux. L'utilisation est très simple : il suffit de cliquer sur le logo de la distribution. Même pas besoin de créer un compte utilisateur !
 
 ## En installant une machine virtuelle
 
@@ -20,7 +20,7 @@ Pour tester plus en détail une distribution, il est possible de l'installer sur
 
 [![](virtualbox.png){fig-align="\"center"}](https://www.virtualbox.org/)
 
-[VirtualBox](https://www.virtualbox.org/) est un logiciel permettant de créer facilement des machines virtuelles. C'est une application facilement configurable et disponible sur Windows, MacOS et Linux.
+[VirtualBox](https://www.virtualbox.org/) est un logiciel permettant de créer rapidement des machines virtuelles. C'est une application facilement configurable et disponible sur Windows, MacOS et Linux.
 
 ### Installons Linux sur VirtualBox
 
