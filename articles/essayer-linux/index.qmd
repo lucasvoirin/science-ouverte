@@ -31,7 +31,9 @@ La première chose dont nous allons avoir besoin pour créer une machine virtuel
 ::: callout-tip
 ## C'est quoi une image ISO ?
 
-Pas de panique ! Une image ISO est juste un fichier permettant d'installer un système d'exploitation (comme une distribution Linux par exemple). Elles sont en général faciles à trouver sur les sites web des distributions Linux.
+Avant, l'installation de Linux nécessitait l'utilisation d'un disque CD-ROM. Heureusement, aujourd'hui, nous avons les images ISO ! Ce sont des fichiers qui renferment les mêmes données qu'un CD d'installation de système d'exploitation. Nous n'avons plus besoin de CD, ce qui est quand même pratique, surtout si, comme moi, vous n'avez pas de lecteur CD sur votre ordinateur !
+
+Une image ISO se présente simplement comme un fichier, avec une extension .iso. Chaque système d'exploitation a sa propre image ISO, on peut en général les trouver sur les sites web des distributions Linux.
 
 Pour cet exemple, nous allons utiliser l’image ISO de [Linux Mint](https://linuxmint.com/). Linux Mint est une distribution Linux largement répandue. Elle a l'avantage et la réputation d'être facile à prendre en main par les habitués⋅ées de Windows.
 
