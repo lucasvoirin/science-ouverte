@@ -34,7 +34,7 @@ total = 10
 
 ### Notre théorie : serions-nous sur Tatooine ?
 
-Notre capitaine de bord, sûr de lui, emet une théorie selon laquelle nous serions arrivés sur la planète Alderaan. Selon le livre des plantes de la galaxie, Tatooine possède une proportion de fleurs blanches de `O.8`.
+Notre capitaine de bord, sûr de lui, émet une théorie selon laquelle nous serions arrivés sur la planète Tatooine. Selon le livre des plantes de la galaxie, Tatooine possède une proportion de fleurs blanches de `O.8`.
 
 On entre cette théorie dans $\textsf{R}$ de la façon suivante :
 
