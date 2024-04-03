@@ -3,7 +3,8 @@ title: "Essayer Linux"
 author: "Lucas"
 date: "2024-02-23"
 date-modified: "2024-02-25"
-categories: [informatique, linux]
+categories: [Informatique, Linux]
+image: "distributions.png"
 ---
 
 Il existe des centaines de distributions Linux. Avant de se lancer, c'est rassurant de pouvoir en tester quelques-unes. Pour cela, pas besoin d'installer Linux sur son ordinateur, il est possible d'essayer des distributions virtuellement !

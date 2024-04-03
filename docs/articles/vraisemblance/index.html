@@ -213,12 +213,12 @@ window.Quarto = {
 <section id="un-atterrissage-forcé" class="level3">
 <h3 class="anchored" data-anchor-id="un-atterrissage-forcé">Un atterrissage forcé</h3>
 <p>Suite à un problème technique, notre navette spatiale doit s’arrêter en urgence sur la planète la plus proche. Un rapide examen de l’ordinateur de bord indique que c’est le système de localisation qui est tombé en panne. Malheureusement, c’est impossible de repartir sans lui. Nous sommes cloués au sol, sans savoir sur quelle planète nous venons d’atterrir.</p>
-<p>Notre capitaine de bord n’est pas trop inquiet, il s’empresse d’appeler l’assistance remorquage spatial, qui viendra sans aucun doute nous chercher d’ici quelques jours au plus tard. Mais sa confiance retombe vite : l’assistance lui demande le nom de la planète sur laquelle nous nous trouvons, sans quoi elle ne pourra jamais réussir à nous localiser.</p>
+<p>Notre capitaine de bord n’est pas trop inquiet, il s’empresse d’appeler l’assistance remorquage spatial qui viendra, sans aucun doute, nous chercher d’ici quelques jours au plus tard. Mais sa confiance retombe vite : l’assistance lui demande le nom de la planète sur laquelle nous nous trouvons, sans quoi elle ne pourra jamais réussir à nous localiser.</p>
 <p>Nous sommes bel et bien coincés ici.</p>
 </section>
 <section id="des-roses-rouges-des-roses-blanches" class="level3">
 <h3 class="anchored" data-anchor-id="des-roses-rouges-des-roses-blanches">Des roses rouges, des roses blanches</h3>
-<p>C’est alors la botaniste de l’équipe a une idée. Il existe sur chaque planète de la galaxie une espèce de rose rouge, mais dont certaines fleurs sont entièrement blanches. Ce qui est intéressant, c’est que chaque planète possède une proportion de fleurs blanches qui lui est propre.</p>
+<p>C’est alors que la botaniste de l’équipe a une idée. Il existe sur chaque planète de la galaxie une espèce de rose rouge, mais dont certaines fleurs sont entièrement blanches. Ce qui est intéressant, c’est que chaque planète possède une proportion de fleurs blanches qui lui est propre.</p>
 <p>En botaniste confirmée, notre coéquipière promène toujours dans son sac un gros livre sur les plantes à fleurs de la galaxie. Et dans son livre est inscrite la liste de toutes les planètes du système avec pour chacune d’entre elles la proportion de fleurs blanches chez notre espèce de rose.</p>
 </section>
 <section id="nos-données-un-bouquet-de-roses" class="level3">
@@ -262,7 +262,7 @@ window.Quarto = {
 </section>
 <section id="dautres-théories" class="level3">
 <h3 class="anchored" data-anchor-id="dautres-théories">D’autres théories</h3>
-<p>Ne nous avouons pas vaincus ! Même si nos données ne sont pas vraisemblables avec notre première théorie, nous avons plein d’autres théories à tester. Rappelez vous, grâce au libre de botanique, nous connaissons les proportions de fleurs blanches pour chaque planète de la galaxie.</p>
+<p>Ne nous avouons pas vaincus ! Même si nos données ne sont pas vraisemblables avec notre première théorie, nous avons plein d’autres théories à tester. Rappelez-vous, grâce au livre de botanique, nous connaissons les proportions de fleurs blanches pour chaque planète de la galaxie.</p>
 <p>Commençons par rentrer dans <span class="math inline">\(\textsf{R}\)</span> chacune des planètes de la liste et la proportion de fleurs blanches associée :</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Coruscant <span class="ot">=</span> <span class="dv">0</span></span>
@@ -302,6 +302,9 @@ window.Quarto = {
 <pre><code> [1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0</code></pre>
 </div>
 </div>
+</section>
+<section id="alors-où-sommes-nous" class="level3">
+<h3 class="anchored" data-anchor-id="alors-où-sommes-nous">Alors ? Où sommes nous ?</h3>
 <p>Il ne nous reste qu’à calculer les vraisemblances pour toutes les théories :</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>likelihoods <span class="ot">=</span> <span class="fu">dbinom</span>(</span>
@@ -312,9 +315,9 @@ window.Quarto = {
 </div>
 <p>Le résultat est une suite de vraisemblances. Chaque valeur représente la probabilité de récolter un échantillon comme le notre (de 4 fleurs blanches sur 10 fleurs récoltées) en fonction de la planète sur laquelle on se trouve. Plus la probabilité est grande, plus on a de chance que notre échantillon soit issu de la planète.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">round</span>(likelihoods, <span class="dv">3</span>))</span></code><button title="Copier dans le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">round</span>(likelihoods, <span class="dv">2</span>))</span></code><button title="Copier dans le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 0.000 0.011 0.088 0.200 0.251 0.205 0.111 0.037 0.006 0.000 0.000</code></pre>
+<pre><code> [1] 0.00 0.01 0.09 0.20 0.25 0.21 0.11 0.04 0.01 0.00 0.00</code></pre>
 </div>
 </div>
 <p>Bon, pour y voir plus clair, faisons un graphique !</p>
@@ -327,6 +330,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<p>Avec ce graphique on voit bien que la probabilité d’avoir récolté un échantillon de roses semblable au nôtre est la plus élevée si nous sommes sur Exegol. Nous pouvons donner cette information à l’assistance remorquage spatial ! On peut également leur transmettre l’information que la probabilité d’avoir un échantillon semblable au notre est assez élevée sur Kamino et Crait. Par contre la vraissemblance de nos données selon la théorie que l’on soit sur Coruscant ou Endor est nulle. Pas la peine que l’assistance nous cherche sur ces deux planètes !</p>
 
 
 </section>
