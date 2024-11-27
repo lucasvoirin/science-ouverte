@@ -5,11 +5,7 @@ about:
     - icon: globe
       text: Page perso
       href: https://lucasvoirin.github.io
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/lucas_voirin
     - icon: github
       text: GitHub
       href: https://github.com/lucasvoirin
 ---
-
