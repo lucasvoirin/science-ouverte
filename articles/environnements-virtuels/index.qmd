@@ -1,0 +1,15 @@
+---
+title: "Travailler avec des environnement virtuels"
+author: "Lucas"
+date: "2025-01-07"
+categories: [Informatique, Python, R, Julia]
+---
+
+::: callout-warning
+# Attention !
+
+Cette page contient des extraits de code `bash`. Il faut toujours comprendre ce que le code proposé fait avant de l'exécuter, d'autant plus plus lorsque ce code nécessite les privilèges d'administration (`sudo`).
+:::
+
+
+
