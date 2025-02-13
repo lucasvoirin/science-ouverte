@@ -14,3 +14,13 @@ language:
   listing-page-category-all: Toutes 
 date-format: "DD/MM/YYYY"
 ---
+
+::: {.callout appearance="minimal"}
+
+`💡`  Sujets très accessibles
+
+`💡💡`  Sujets techniques
+
+`💡💡💡`  Sujets complexes ou spécifiques
+
+:::

@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lucas">
+<meta name="dcterms.date" content="2025-12-02">
 
-<title>💡&nbsp;science-ouverte - Essayer Linux</title>
+<title>💡&nbsp;science-ouverte - Git et Github</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -108,11 +143,12 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Essayer Linux</h1>
+      <h1 class="title">Git et Github</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Informatique</div>
                 <div class="quarto-category">Linux</div>
-                <div class="quarto-category">💡</div>
+                <div class="quarto-category">Windows</div>
+                <div class="quarto-category">💡💡</div>
               </div>
                   </div>
   </div>
@@ -130,14 +166,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Publié le</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">23/02/2024</p>
+        <p class="date">12/02/2025</p>
       </div>
     </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modifié le</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">25/02/2024</p>
+        <p class="date-modified">12/02/2025</p>
       </div>
     </div>
       
@@ -155,82 +191,70 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Il existe des centaines de distributions Linux. Avant de se lancer, c’est rassurant de pouvoir en tester quelques-unes. Pour cela, pas besoin d’installer Linux sur son ordinateur, il est possible d’essayer des distributions virtuellement !</p>
-<section id="sans-rien-installer-sur-son-ordinateur" class="level2">
-<h2 class="anchored" data-anchor-id="sans-rien-installer-sur-son-ordinateur">Sans rien installer sur son ordinateur</h2>
-<div class="quarto-figure quarto-figure-&quot;center">
-<figure class="figure">
-<p><a href="https://distrosea.com/"><img src="distrosea.png" class="img-fluid quarto-figure quarto-figure-&quot;center figure-img"></a></p>
-</figure>
+<p>Si tu es ici, c’est que tu sais déjà à quoi sert Git et que tu souhaites commencer à l’utiliser ! Et c’est une très bonne idée !</p>
+<section id="première-étape-installer-git" class="level3">
+<h3 class="anchored" data-anchor-id="première-étape-installer-git">Première étape : installer Git</h3>
+<p>La première chose à faire, c’est d’installe Git. La façon de le faire est différente en fonction du système d’exploitation mais il n’y a rien de compliqué, c’est juste un logiciel comme un autre.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Il existe une version de Git pour Windows qui est disponible depuis la <a href="https://git-scm.com/downloads/win">page de téléchargement officielle</a>.</p>
+<p>Il suffit de télécharger puis ouvrir l’exécutable qui correspond à votre système (en général le 64-bit).</p>
+<p>Laissez les options par défaut, ça sera très bien pour commencer !</p>
 </div>
-<p><a href="https://distrosea.com/">Distrosea</a> est un site web proposant d’essayer facilement différentes distributions Linux. Le site propose toutes les distributions les plus utilisées (Ubuntu, Linux Mint, Debian, Fedora…) et permet de se connecter à distance à un ordinateur sous Linux. L’utilisation est très simple : il suffit de cliquer sur le logo de la distribution. Même pas besoin de créer un compte utilisateur !</p>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Le gestionnaire de paquets de votre distribution fera l’affaire !</p>
+<p>Sur Debian on peut le faire avec <code>apt</code> :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> install git</span></code><button title="Copier dans le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Sur les autres distributions il faudra juste utiliser le gestionnaire par défaut (<code>dnf</code>, <code>pacman</code>… ).</p>
+</div>
+</div>
+</div>
 </section>
-<section id="en-installant-une-machine-virtuelle" class="level2">
-<h2 class="anchored" data-anchor-id="en-installant-une-machine-virtuelle">En installant une machine virtuelle</h2>
-<p>Pour tester plus en détail une distribution, il est possible de l’installer sur un ordinateur virtuel à l’intérieur de son propre ordinateur, on parle de machine virtuelle. Il existe des logiciels spécialisés qui permettent de faire cela.</p>
-<div class="quarto-figure quarto-figure-&quot;center">
+<section id="deuxième-étape-entrer-dans-le-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="deuxième-étape-entrer-dans-le-terminal">Deuxième étape : entrer dans le terminal</h3>
+<p>Eh oui, git est un logiciel dit “en ligne de commande” ! Ça veut dire que pour l’utiliser il faut écrire des lignes de code dans un terminal.</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.virtualbox.org/"><img src="virtualbox.png" class="img-fluid quarto-figure quarto-figure-&quot;center figure-img"></a></p>
+<p><img src="./hackerman.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p><a href="https://www.virtualbox.org/">VirtualBox</a> est un logiciel permettant de créer rapidement des machines virtuelles. C’est une application facilement configurable et disponible sur Windows, MacOS et Linux.</p>
-<section id="installons-linux-sur-virtualbox" class="level3">
-<h3 class="anchored" data-anchor-id="installons-linux-sur-virtualbox">Installons Linux sur VirtualBox</h3>
-<p>En ouvrant pour la première fois le logiciel, vous pouvez commencer par changer la langue d’affichage dans <code>File &gt; Preferences &gt; Language</code>.</p>
-<p>La première chose dont nous allons avoir besoin pour créer une machine virtuelle avec Linux dessus, c’est une image ISO.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-C’est quoi une image ISO ?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Avant, l’installation de Linux nécessitait l’utilisation d’un disque CD-ROM. Heureusement, aujourd’hui, nous avons les images ISO ! Ce sont des fichiers qui renferment les mêmes données qu’un CD d’installation de système d’exploitation. Nous n’avons plus besoin de CD, ce qui est quand même pratique, surtout si, comme moi, vous n’avez pas de lecteur CD sur votre ordinateur !</p>
-<p>Une image ISO se présente simplement comme un fichier, avec une extension .iso. Chaque système d’exploitation a sa propre image ISO, on peut en général les trouver sur les sites web des distributions Linux.</p>
-<p>Pour cet exemple, nous allons utiliser l’image ISO de <a href="https://linuxmint.com/">Linux Mint</a>. Linux Mint est une distribution Linux largement répandue. Elle a l’avantage et la réputation d’être facile à prendre en main par les habitués⋅ées de Windows.</p>
-<p>Commençons par nous rendre sur la <a href="https://linuxmint.com/edition.php?id=311">page de téléchargement des images ISO de Linux Mint</a>.</p>
-<p><img src="iso_1.png" class="img-fluid"></p>
-<p>Dans la section “Download mirrors”, la page contient beaucoup de liens associés à des pays. Il n’y a aucune différence entre ces liens, vous pouvez choisir n’importe lequel, mais les liens indiqués dans votre pays permettront un téléchargement plus rapide. Cliquez sur un des liens et le téléchargement commencera.</p>
-<p>Une fois le téléchargement terminé (cela peut prendre un peu de temps, les images ISO sont de gros fichiers) mettez le dans un dossier de votre ordinateur que vous saurez retrouver.</p>
-</div>
-</div>
-<p>De retour dans VirtualBox, cliquez sur le gros bouton <code>Nouvelle</code>.</p>
-<p><img src="virtualbox_app_1.png" class="img-fluid"></p>
-<p>Une autre fenêtre s’ouvre pour nous permettre de configurer une nouvelle machine virtuelle. Commencez par entrer le nom de votre machine, pour cet exemple on écrira “Linux Mint” pour que VirtualBox puisse automatiquement définir les bonnes options à paramètrer pour Linux Mint. Vérifiez que les cases <code>Type</code> et <code>Version</code> affichent respectivement “Linux” et “Ubuntu (64-bit)”. Ensuite, cliquez sur <code>Suivant</code>.</p>
-<p><img src="virtualbox_app_2.png" class="img-fluid"></p>
-<p>Laissez toutes les options par défaut dans les fenêtres suivantes. Cliquez à chaque fois sur <code>Suivant</code>, puis la dernière fois, sur <code>Finish</code>. Ça y est la machine virtuelle est prête, il ne reste plus qu’à installer Linux Mint dessus !</p>
-<p><img src="virtualbox_app_5.png" class="img-fluid"></p>
-<p>Dans la liste à gauche de l’écran vous devriez voir votre nouvelle machine Linux Mint. Cliquez dessus, puis sur le gros bouton <code>Configuration</code>. Nous allons installer l’image ISO sur la machine virtuelle.</p>
-<p><img src="virtualbox_app_6.png" class="img-fluid"></p>
-<p>Dans la fenêtre de configuration, cliquez sur <code>Stockage</code> puis sur <code>vide</code>. Vous devriez avoir cette fenêtre :</p>
-<p><img src="virtualbox_app_7.png" class="img-fluid"></p>
-<p>Au bout de <code>Lecteur optique</code>, cliquez sur le petit disque bleu puis sur <code>Choose a disk file...</code>. Dans l’explorateur de fichiers qui s’ouvre, sélectionnez l’image ISO de Linux Mint que vous aviez téléchargée. Vous devriez maintenant voir les informations de votre image ISO s’afficher. Vérifiez que la case <code>Live CD/DVD</code> est cochée puis fermez la fenêtre de configuration.</p>
-<p><img src="virtualbox_app_8.png" class="img-fluid"></p>
-<p>Désormais votre machine est prête à fonctionner ! Cliquez sur le gros bouton <code>Démarrer</code>, et Linux Mint va se lancer sur une nouvelle fenêtre.</p>
-<p><img src="virtualbox_app_6.png" class="img-fluid"></p>
-<p><img src="virtualbox_app_9.png" class="img-fluid"></p>
+<p>Mais avant de paniquer, voici quelques infos qui vont vous rassurer :</p>
+<ol type="1">
+<li>si on a peur d’oublier comment fonctionne le logiciel, on peut écrire les commandes utiles dans un carnet ou sur un ficher de l’ordinateur;</li>
+<li>en vrai, il y a pas tant de commandes que ça donc c’est très facile de s’en rappeler;</li>
+<li>quand on cherche de l’aide, c’est super facile de trouver sur internet (ou ChatGPT) des commandes qui fonctionnent;</li>
+<li>utiliser le terminal, ça donne l’impression d’être vraiment pro (même quand c’est pas le cas) et ça c’est cool !</li>
+</ol>
+</section>
+<section id="troisième-étape-configurer-git" class="level3">
+<h3 class="anchored" data-anchor-id="troisième-étape-configurer-git">Troisième étape : configurer Git</h3>
+</section>
+<section id="quatrième-étape-lier-git-à-un-dépôt-distant" class="level3">
+<h3 class="anchored" data-anchor-id="quatrième-étape-lier-git-à-un-dépôt-distant">Quatrième étape : lier Git à un dépôt distant</h3>
+<p>Quéssé ça un dépôt distant ?!</p>
+<p>Je suis sûr que tu as déjà croisé <a href="https://github.com">Github</a></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Références
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>La version de Linux Mint sur laquelle vous naviguez n’est pas une version complète, c’est une version dite “Live”. Elle vous permet de tester la distribution mais ne l’a pas installée sur votre machine virtuelle.</p>
-<p>Pour installer Linux Mint sur votre machine virtuelle de manière durable vous pouvez cliquer sur l’icone <code>Install Linux Mint</code> qui est sur le bureau. Suivez les instructions du gestionnaire d’installation et laissez les options par défaut si vous ne comprenez pas à quoi elles servent (ce qui est tout à fait normal la première fois).</p>
-<p>N’ayez pas peur de casser quelque chose, vous êtes sur une machine virtuelle, complètement séparée de votre propre ordinateur ! C’est l’endroit rêvé pour bidouiller !</p>
+<p>Git possède une <a href="https://git-scm.com/book/fr/v2">documentation</a> très complète et, chose rare, en Français !! Il est certain que la réponse à beaucoup de questions s’y trouve.</p>
+<p>Sinon, en anglais mais très vulgarisé voici quelques références intéressantes :</p>
+<ul>
+<li><a href="https://happygitwithr.com/">Happy Git With R</a> pour apprendre à configurer Git pour RStudio.</li>
+<li><a href="https://swcarpentry.github.io/git-novice/index.html">Software Carpentry</a> est un tutoriel complet et ludique pour prendre en main Git.</li>
+</ul>
 </div>
 </div>
-<p>L’exemple ici utilisait Linux Mint, mais la procédure est exactement la même pour d’autres distributions. Vous pourrez par exemple créer une machine virtuelle pour tester <a href="https://ubuntu.com/download/desktop">Ubuntu</a>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

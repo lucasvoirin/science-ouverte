@@ -4,7 +4,7 @@ author: "Lucas"
 date: "2024-11-27"
 date-modified: "2024-11-27"
 description: "Sur Debian, il est possible d'installer `R` à partir du gestionnaire de paquets `apt`. Toutefois, la version de `R` sur les dépôts Debian est généralement moins à jour que la version disponible sur le CRAN..."
-categories: [Informatique, Linux]
+categories: [Informatique, Linux, 💡💡💡]
 ---
 
 ::: callout-warning

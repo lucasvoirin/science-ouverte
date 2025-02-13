@@ -2,7 +2,7 @@
 title: "Vraisemblablement..."
 author: "Lucas"
 date: "2024-03-23"
-categories: [Statistiques]
+categories: [Statistiques, 💡]
 image: "vraisemblance.png"
 ---
 

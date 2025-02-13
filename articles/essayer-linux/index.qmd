@@ -3,7 +3,7 @@ title: "Essayer Linux"
 author: "Lucas"
 date: "2024-02-23"
 date-modified: "2024-02-25"
-categories: [Informatique, Linux]
+categories: [Informatique, Linux, 💡]
 image: "distributions.png"
 ---
 

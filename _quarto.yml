@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "science-ouverte"
+  title: "💡 science-ouverte"
   navbar:
     left: 
       - articles.qmd
