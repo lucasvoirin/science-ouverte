@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lucas">
+<meta name="dcterms.date" content="2025-12-02">
 
-<title>Ressources – 💡&nbsp;science-ouverte</title>
+<title>Git et Github – 💡&nbsp;science-ouverte</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +22,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-48ffa3e5b9d089919c6712c39e5b00f2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d8086b56ec1473a92cd8cdd05bb08aea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-48ffa3e5b9d089919c6712c39e5b00f2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-d8086b56ec1473a92cd8cdd05bb08aea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,17 +104,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">💡&nbsp;science-ouverte</span>
     </a>
   </div>
@@ -89,11 +125,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./articles.html"> 
+    <a class="nav-link" href="../../articles.html"> 
 <span class="menu-text">Articles</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./ressources.html" aria-current="page"> 
+    <a class="nav-link" href="../../ressources.html"> 
 <span class="menu-text">Ressources</span></a>
   </li>  
 </ul>
@@ -104,44 +140,205 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Git et Github</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Informatique</div>
+                <div class="quarto-category">Linux</div>
+                <div class="quarto-category">Windows</div>
+                <div class="quarto-category">💡💡</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Auteur</div>
+      <div class="quarto-title-meta-contents">
+               <p>Lucas </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Publié le</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">12/02/2025</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modifié le</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">21/02/2025</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Ressources</h1>
+
+
+
+
+<p>Si tu es ici, c’est que tu sais déjà à quoi sert Git et que tu souhaites commencer à l’utiliser ! Et c’est une très bonne idée !</p>
+<section id="première-étape-installer-git" class="level3">
+<h3 class="anchored" data-anchor-id="première-étape-installer-git">Première étape : installer Git</h3>
+<p>La première chose à faire, c’est d’installe Git. La façon de le faire est différente en fonction du système d’exploitation mais il n’y a rien de compliqué, c’est juste un logiciel comme un autre.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Il existe une version de Git pour Windows qui est disponible depuis la <a href="https://git-scm.com/downloads/win">page de téléchargement officielle</a>.</p>
+<p>Il suffit de télécharger puis ouvrir l’exécutable qui correspond à votre système (en général le 64-bit).</p>
+<p>Laissez les options par défaut, ça sera très bien pour commencer !</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Le gestionnaire de paquets de votre distribution fera l’affaire !</p>
+<p>Sur Debian on peut le faire avec <code>apt</code> :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> install git</span></code><button title="Copier dans le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Sur les autres distributions il faudra juste utiliser le gestionnaire par défaut (<code>dnf</code>, <code>pacman</code>… ).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="deuxième-étape-entrer-dans-le-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="deuxième-étape-entrer-dans-le-terminal">Deuxième étape : entrer dans le terminal</h3>
+<p>Eh oui, git est un logiciel dit “en ligne de commande” ! Ça veut dire que pour l’utiliser il faut écrire des lignes de code dans un terminal.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./hackerman.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>Mais avant de paniquer, voici quelques infos qui vont vous rassurer :</p>
+<ol type="1">
+<li>si on a peur d’oublier comment fonctionne le logiciel, on peut écrire les commandes utiles dans un carnet ou sur un ficher de l’ordinateur;</li>
+<li>en vrai, il y a pas tant de commandes que ça donc c’est très facile de s’en rappeler;</li>
+<li>quand on cherche de l’aide, c’est super facile de trouver sur internet (ou ChatGPT) des commandes qui fonctionnent;</li>
+<li>utiliser le terminal, ça donne l’impression d’être vraiment pro (même quand c’est pas le cas) et ça c’est cool !</li>
+</ol>
+</section>
+<section id="troisième-étape-configurer-git" class="level3">
+<h3 class="anchored" data-anchor-id="troisième-étape-configurer-git">Troisième étape : configurer Git</h3>
+<p>On va ajouter quelques configurations au fichier ~/.gitconfig</p>
+<ul>
+<li><p><code>git config --global user.email "arsene.lupin@monemail.com"</code></p></li>
+<li><p><code>git config --global user.name "gentlemancambrioleur"</code></p></li>
+<li><p><code>git config --global init.defaultBranch main</code></p></li>
+<li><p><code>git config --global core.editor "nvim -u NONE"</code></p></li>
+</ul>
+</section>
+<section id="quatrième-étape-le-dépôt-distant" class="level3">
+<h3 class="anchored" data-anchor-id="quatrième-étape-le-dépôt-distant">Quatrième étape : le dépôt distant</h3>
+<section id="quéssé-ça-un-dépôt-distant" class="level4">
+<h4 class="anchored" data-anchor-id="quéssé-ça-un-dépôt-distant">Quéssé ça un dépôt distant ?!</h4>
+<p>Je suis sûr que tu as déjà croisé <a href="https://github.com">Github</a>. Il s’agit d’un service de stockage en ligne, un peu comme Google Drvie. Mais contrairement au service Drive de Google, GitHub permet essentiellement de stocker (mais pas que !) du code.</p>
+<p>L’avantage avec GitHub, c’est que l’on peut communiquer avec directement depuis Git. Et ça c’est vraiment très pratique !</p>
+<p>Mais avant que Git (sur ton ordinateur) et GitHub (sur internet) puissent communiquer, il faut quelques étapes.</p>
+</section>
+<section id="créer-un-compte" class="level4">
+<h4 class="anchored" data-anchor-id="créer-un-compte">Créer un compte</h4>
+<p>Rien de plus simple, c’est juste un service en ligne comme un autre. Alors tu peux aller sur <a href="https://github.com">github.com</a> et créer un compte !</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Choisis bien ton nom d’utilisateur, sur GitHub, c’est ce nom qui va se retrouver dans l’url permettant d’accèder à ta page perso. Donc si tu rends ton code publique un jour, ce nom sera celui qui sera affiché.</p>
+</div>
+</div>
+<p>Une fois que tu as ton compte on va pouvoir le faire communiquer avec Git. Pour cela, la solution la plus simple est SSH.</p>
+</section>
+<section id="ssh" class="level4">
+<h4 class="anchored" data-anchor-id="ssh">SSH</h4>
+<p>Alors là on s’attaque aux choses sérieuses ! C’est probable que tu ne saches pas ce qu’est SSH alors voici le principe :</p>
+<p>Pour communiquer, ton ordinateur (avec Git dessus) et le serveur de GitHub doivent établir une connexion sécurisée. Cette connexion empèche les personnes malveillantes de voir ou modifier au passage ce que tu échanges avec GitHub. SSH est un logiciel permettant de sécuriser ce type de communication. Pour cela, on utilise deux fichiers, que l’on appelle des clés.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour établir une communicatin sécurisée entre un ordinateur et un serveur, SSH utilise une clé dite privée et une clé dite publique. La clé privée doit rester sur l’ordinateur et ne surtout pas être partagée. La clé publique doit quant à elle être donnée au serveur. Une fois la clé privée, bien en sécurité sur l’ordinateur et la clé publique donnée à GitHub, la communication peut se faire de manière sécurisée.</p>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<pre><code>C:\Users\&lt;nom_utilisateur&gt;\.ssh</code></pre>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<pre><code>/home/&lt;nom_utilisateur&gt;/.ssh</code></pre>
+</div>
+</div>
+</div>
+<p>Pour générer un jeu de clés SSH (un clé privée et une clé publique), il suffit de lancer la commande suivante :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519</span></code><button title="Copier dans le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>On nous demande de spécifier un nom de fichier pour stocker ces clés. Comme les clés seront utilisées pour communiquer avec le compte GitHub d’Arsène, on va mettre <code>github_arsene_lupin</code>.</p>
+<p>Une fois le nom du fichier entré, on nous demande un mot de passe. C’est une sécurité permettant de protéger l’accès à la clé privée. Si l’on ne souhaite pas mettre de mot de passe, il suffit d’appuyer sur <code>Entrée</code>.</p>
+<p>Une fois toutes les étapes complétées, SSH a créé deux fichiers :</p>
+<ul>
+<li><p>la cla privée : <code>github_arsene_lupin</code></p></li>
+<li><p>et la clé publique : <code>github_arsene_lupin.pub</code>.</p></li>
+</ul>
+<p>Tu peux ouvrir le fichier contenant la clé publique, à l’intérieur il doit y avoir quelque chose qui ressemble à ça :</p>
+<pre><code>ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICoyAUJwwKgKMrFgORyqSdEPqjYMYXwnDCDO59GCmYlV</code></pre>
+<p>Pas d’inquiètude, ce n’est pas prévu pour être lu par des humains !</p>
+<p>Il ne nous reste maintenant qu’une seule étape : donner la clé publique à GitHub !</p>
+<p>Depuis ta page de profil GitHub, clique sur ton image de profile en haut à droite pour ouvrir le menu. Dans ce menu, clique sur <code>Settings</code>.</p>
+<p>Une fois dans le menu de configuration, clique sur <code>SSH and GPG keys</code>.</p>
+<p>Enfin, clique sur le bouton vert <code>New SSH key</code>.</p>
+<p>Tu peux alors entrer le titre de la clé dans la case <code>Title</code> (ce que tu mets n’as pas vraiment d’importance, c’est juste pour te souvenir de quel ordinateur est lié à cette clé) et copier la clé publique dans la case <code>Key</code>.</p>
+<p>Cliques enfin sur <code>Add SSH key</code> et voilà, c’est fini !</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Références
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Git possède une <a href="https://git-scm.com/book/fr/v2">documentation</a> très complète et, chose rare, en Français !! Il est certain que la réponse à beaucoup de questions s’y trouve.</p>
+<p>Sinon, en anglais mais très vulgarisé voici quelques références intéressantes :</p>
+<ul>
+<li><a href="https://happygitwithr.com/">Happy Git With R</a> pour apprendre à configurer Git pour RStudio.</li>
+<li><a href="https://swcarpentry.github.io/git-novice/index.html">Software Carpentry</a> est un tutoriel complet et ludique pour prendre en main Git.</li>
+</ul>
+</div>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="statistiques" class="level2">
-<h2 class="anchored" data-anchor-id="statistiques">Statistiques</h2>
-<ul>
-<li><em>Statistical modeling with R, a dual frequentist and bayesian approach for life scientists</em> de Pablo Inchausti (2023)</li>
-<li><em>Applied Statistical Modelling for Ecologists</em> de Marc Kéry et Kenneth F. Kellner (2024)</li>
-<li><em>The Order of the Statistical Jedi</em> de Dustin Fife (2022)</li>
-</ul>
-
-
+</section>
 </section>
 
 </main> <!-- /main -->
+<div>
+<h3>Licence</h3>
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a><br>Ce contenu est sous licence Creative Commons Attribution 4.0 International. Vous pouvez l'utiliser librement <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.fr">sous certaines conditions</a>.
+<h3>Réagir</h3>
+</div>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -185,12 +382,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copié !");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copié !");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -559,6 +756,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://giscus.app/client.js" data-repo="lucasvoirin/science-ouverte" data-repo-id="R_kgDOK_eAog" data-category="General" data-category-id="DIC_kwDOK_eAos4CcHch" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="fr" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
