@@ -2,16 +2,25 @@
 title: "Git et Github"
 author: "Lucas"
 date: "2025-02-12"
-date-modified: "2025-02-21"
+date-modified: "2025-03-10"
 description: ""
 categories: [Informatique, Linux, Windows, 💡💡]
 ---
+
+
+::: callout-warning
+# Attention !
+
+- Cette page contient des extraits de code `bash`. Il faut toujours comprendre ce que le code proposé fait avant de l'exécuter, d'autant plus plus lorsque ce code nécessite les privilèges d'administration (`sudo`).
+
+- L'article est encore en cours de rédaction, des améliorations seront faites prochainement.
+:::
 
 Si tu es ici, c'est que tu sais déjà à quoi sert Git et que tu souhaites commencer à l'utiliser ! Et c'est une très bonne idée ! 
 
 ### Première étape : installer Git
 
-La première chose à faire, c'est d'installe Git. La façon de le faire est différente en fonction du système d'exploitation mais il n'y a rien de compliqué, c'est juste un logiciel comme un autre.
+La première chose à faire, c'est d'installer Git. La façon de le faire est différente en fonction du système d'exploitation mais il n'y a rien de compliqué, c'est juste un logiciel comme un autre.
 
 ::: {.panel-tabset}
 
@@ -49,12 +58,12 @@ Mais avant de paniquer, voici quelques infos qui vont vous rassurer :
 
 1. si on a peur d'oublier comment fonctionne le logiciel, on peut écrire les commandes utiles dans un carnet ou sur un ficher de l'ordinateur;
 2. en vrai, il y a pas tant de commandes que ça donc c'est très facile de s'en rappeler;
-3. quand on cherche de l'aide, c'est super facile de trouver sur internet (ou ChatGPT) des commandes qui fonctionnent;
-4. utiliser le terminal, ça donne l'impression d'être vraiment pro (même quand c'est pas le cas) et ça c'est cool !
+3. quand on cherche de l'aide, c'est super facile de trouver sur internet (ou ChatGPT) des commandes qui fonctionnent ;
+4. utiliser le terminal, ça donne l'impression d'être vraiment pro !
 
 ### Troisième étape : configurer Git
 
-On va ajouter quelques configurations au fichier ~/.gitconfig
+On va ajouter quelques configurations au fichier `~/.gitconfig`
 
 - `git config --global user.email "arsene.lupin@monemail.com"`
 
@@ -68,7 +77,8 @@ On va ajouter quelques configurations au fichier ~/.gitconfig
 
 #### Quéssé ça un dépôt distant ?!
 
-Je suis sûr que tu as déjà croisé [Github](https://github.com). Il s'agit d'un service de stockage en ligne, un peu comme Google Drvie. Mais contrairement au service Drive de Google, GitHub permet essentiellement de stocker (mais pas que !) du code.
+Je suis sûr que tu as déjà croisé [Github](https://github.com). Il s'agit d'un service de stockage en ligne, un peu comme Google Drive.
+Mais contrairement au service de Google, GitHub permet essentiellement de stocker (mais pas que !) du code.
 
 L'avantage avec GitHub, c'est que l'on peut communiquer avec directement depuis Git. Et ça c'est vraiment très pratique !
 
@@ -82,19 +92,25 @@ Rien de plus simple, c'est juste un service en ligne comme un autre. Alors tu pe
 Choisis bien ton nom d'utilisateur, sur GitHub, c'est ce nom qui va se retrouver dans l'url permettant d'accèder à ta page perso. Donc si tu rends ton code publique un jour, ce nom sera celui qui sera affiché.
 :::
 
+Une fois que tu as ton compte on va pouvoir le faire communiquer avec Git. Pour cela, la solution la plus pratique est SSH.
 
-Une fois que tu as ton compte on va pouvoir le faire communiquer avec Git. Pour cela, la solution la plus simple est SSH.
-
-#### SSH
+#### Générer des clés SSH
 
 Alors là on s'attaque aux choses sérieuses ! C'est probable que tu ne saches pas ce qu'est SSH alors voici le principe :
 
 Pour communiquer, ton ordinateur (avec Git dessus) et le serveur de GitHub doivent établir une connexion sécurisée. Cette connexion empèche les personnes malveillantes de voir ou modifier au passage ce que tu échanges avec GitHub. SSH est un logiciel permettant de sécuriser ce type de communication. Pour cela, on utilise deux fichiers, que l'on appelle des clés.
 
 ::: callout-tip
-Pour établir une communicatin sécurisée entre un ordinateur et un serveur, SSH utilise une clé dite privée et une clé dite publique. La clé privée doit rester sur l'ordinateur et ne surtout pas être partagée. La clé publique doit quant à elle être donnée au serveur. Une fois la clé privée, bien en sécurité sur l'ordinateur et la clé publique donnée à GitHub, la communication peut se faire de manière sécurisée.
+Pour établir une communicatin sécurisée entre un ordinateur et un serveur, SSH utilise une clé dite privée et une clé dite publique.
+La clé privée doit rester sur l'ordinateur et ne surtout pas être partagée.
+La clé publique doit quant à elle être donnée au serveur.
+Une fois la clé privée, bien en sécurité sur l'ordinateur et la clé publique donnée à GitHub, la communication peut se faire de manière sécurisée.
 :::
 
+
+Les fichiers contenant les clés SSH sont généralement placés dans un dossier spécifique sur l'ordinateur, ce qui permet au système de les retrouver facilement.
+
+Chaque utilisateur possède son propre dossier de clés SSH nommé `.ssh` et placé à la racine du dossier personel de l'utilisateur. S'il n'existe pas encore c'est possible de le créer.
 
 ::: {.panel-tabset}
 
@@ -112,7 +128,7 @@ C:\Users\<nom_utilisateur>\.ssh
 
 :::
 
-Pour générer un jeu de clés SSH (un clé privée et une clé publique), il suffit de lancer la commande suivante :
+Pour générer un jeu de clés SSH (une clé privée et une clé publique), il suffit de lancer la commande suivante :
 
 ```bash
 ssh-keygen -t ed25519
@@ -124,30 +140,46 @@ Une fois le nom du fichier entré, on nous demande un mot de passe. C'est une s�
 
 Une fois toutes les étapes complétées, SSH a créé deux fichiers :
 
-- la cla privée : `github_arsene_lupin`
+- la clé privée : `github_arsene_lupin` (à ne surtout pas partager)
 
 - et la clé publique : `github_arsene_lupin.pub`.
 
 Tu peux ouvrir le fichier contenant la clé publique, à l'intérieur il doit y avoir quelque chose qui ressemble à ça :
 
-```
+```{.bash filename="github_arsene_lupin.pub"}
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICoyAUJwwKgKMrFgORyqSdEPqjYMYXwnDCDO59GCmYlV
 ```
 
 Pas d'inquiètude, ce n'est pas prévu pour être lu par des humains !
 
-Il ne nous reste maintenant qu'une seule étape : donner la clé publique à GitHub !
+Il ne nous reste maintenant qu'une seule étape : donner cette clé publique à GitHub !
 
-Depuis ta page de profil GitHub, clique sur ton image de profile en haut à droite pour ouvrir le menu. Dans ce menu, clique sur `Settings`.
+#### Ajouter une clé SSH sur GitHub
 
-Une fois dans le menu de configuration, clique sur `SSH and GPG keys`.
+On va installer une clé ssh sur le compte GitHub d'Arsène Lupin.
 
-Enfin, clique sur le bouton vert `New SSH key`.
+![](github_home.png)
 
-Tu peux alors entrer le titre de la clé dans la case `Title` (ce que tu mets n'as pas vraiment d'importance, c'est juste pour te souvenir de quel ordinateur est lié à cette clé) et copier la clé publique dans la case `Key`.
 
-Cliques enfin sur `Add SSH key` et voilà, c'est fini !
+1. Depuis ta page de profil GitHub, clique sur ton image de profile en haut à droite pour ouvrir le menu. Dans ce menu, clique sur `Settings`.
 
+![](github_menu.png)
+
+2. Une fois dans le menu de configuration, clique sur `SSH and GPG keys`.
+Puis, clique sur le bouton vert `New SSH key`.
+
+![](github_keys.png)
+
+
+3. Tu peux alors entrer le titre de la clé dans la case `Title` (ce que tu mets n'as pas vraiment d'importance, c'est juste pour te souvenir de quel ordinateur est lié à cette clé) et copier la clé publique dans la case `Key`.
+
+
+![](github_ssh.png)
+
+4. Cliques enfin sur `Add SSH key` et voilà, c'est fini !
+
+
+![](github_key_added.png)
 
 ::: callout-note
 # Références

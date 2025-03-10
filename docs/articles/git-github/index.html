@@ -173,7 +173,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Modifié le</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">21/02/2025</p>
+        <p class="date-modified">10/03/2025</p>
       </div>
     </div>
       
@@ -191,10 +191,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Attention !
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Cette page contient des extraits de code <code>bash</code>. Il faut toujours comprendre ce que le code proposé fait avant de l’exécuter, d’autant plus plus lorsque ce code nécessite les privilèges d’administration (<code>sudo</code>).</p></li>
+<li><p>L’article est encore en cours de rédaction, des améliorations seront faites prochainement.</p></li>
+</ul>
+</div>
+</div>
 <p>Si tu es ici, c’est que tu sais déjà à quoi sert Git et que tu souhaites commencer à l’utiliser ! Et c’est une très bonne idée !</p>
 <section id="première-étape-installer-git" class="level3">
 <h3 class="anchored" data-anchor-id="première-étape-installer-git">Première étape : installer Git</h3>
-<p>La première chose à faire, c’est d’installe Git. La façon de le faire est différente en fonction du système d’exploitation mais il n’y a rien de compliqué, c’est juste un logiciel comme un autre.</p>
+<p>La première chose à faire, c’est d’installer Git. La façon de le faire est différente en fonction du système d’exploitation mais il n’y a rien de compliqué, c’est juste un logiciel comme un autre.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Linux</a></li></ul>
 <div class="tab-content">
@@ -224,13 +240,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>si on a peur d’oublier comment fonctionne le logiciel, on peut écrire les commandes utiles dans un carnet ou sur un ficher de l’ordinateur;</li>
 <li>en vrai, il y a pas tant de commandes que ça donc c’est très facile de s’en rappeler;</li>
-<li>quand on cherche de l’aide, c’est super facile de trouver sur internet (ou ChatGPT) des commandes qui fonctionnent;</li>
-<li>utiliser le terminal, ça donne l’impression d’être vraiment pro (même quand c’est pas le cas) et ça c’est cool !</li>
+<li>quand on cherche de l’aide, c’est super facile de trouver sur internet (ou ChatGPT) des commandes qui fonctionnent ;</li>
+<li>utiliser le terminal, ça donne l’impression d’être vraiment pro !</li>
 </ol>
 </section>
 <section id="troisième-étape-configurer-git" class="level3">
 <h3 class="anchored" data-anchor-id="troisième-étape-configurer-git">Troisième étape : configurer Git</h3>
-<p>On va ajouter quelques configurations au fichier ~/.gitconfig</p>
+<p>On va ajouter quelques configurations au fichier <code>~/.gitconfig</code></p>
 <ul>
 <li><p><code>git config --global user.email "arsene.lupin@monemail.com"</code></p></li>
 <li><p><code>git config --global user.name "gentlemancambrioleur"</code></p></li>
@@ -242,7 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="quatrième-étape-le-dépôt-distant">Quatrième étape : le dépôt distant</h3>
 <section id="quéssé-ça-un-dépôt-distant" class="level4">
 <h4 class="anchored" data-anchor-id="quéssé-ça-un-dépôt-distant">Quéssé ça un dépôt distant ?!</h4>
-<p>Je suis sûr que tu as déjà croisé <a href="https://github.com">Github</a>. Il s’agit d’un service de stockage en ligne, un peu comme Google Drvie. Mais contrairement au service Drive de Google, GitHub permet essentiellement de stocker (mais pas que !) du code.</p>
+<p>Je suis sûr que tu as déjà croisé <a href="https://github.com">Github</a>. Il s’agit d’un service de stockage en ligne, un peu comme Google Drive. Mais contrairement au service de Google, GitHub permet essentiellement de stocker (mais pas que !) du code.</p>
 <p>L’avantage avec GitHub, c’est que l’on peut communiquer avec directement depuis Git. Et ça c’est vraiment très pratique !</p>
 <p>Mais avant que Git (sur ton ordinateur) et GitHub (sur internet) puissent communiquer, il faut quelques étapes.</p>
 </section>
@@ -262,10 +278,10 @@ Tip
 <p>Choisis bien ton nom d’utilisateur, sur GitHub, c’est ce nom qui va se retrouver dans l’url permettant d’accèder à ta page perso. Donc si tu rends ton code publique un jour, ce nom sera celui qui sera affiché.</p>
 </div>
 </div>
-<p>Une fois que tu as ton compte on va pouvoir le faire communiquer avec Git. Pour cela, la solution la plus simple est SSH.</p>
+<p>Une fois que tu as ton compte on va pouvoir le faire communiquer avec Git. Pour cela, la solution la plus pratique est SSH.</p>
 </section>
-<section id="ssh" class="level4">
-<h4 class="anchored" data-anchor-id="ssh">SSH</h4>
+<section id="générer-des-clés-ssh" class="level4">
+<h4 class="anchored" data-anchor-id="générer-des-clés-ssh">Générer des clés SSH</h4>
 <p>Alors là on s’attaque aux choses sérieuses ! C’est probable que tu ne saches pas ce qu’est SSH alors voici le principe :</p>
 <p>Pour communiquer, ton ordinateur (avec Git dessus) et le serveur de GitHub doivent établir une connexion sécurisée. Cette connexion empèche les personnes malveillantes de voir ou modifier au passage ce que tu échanges avec GitHub. SSH est un logiciel permettant de sécuriser ce type de communication. Pour cela, on utilise deux fichiers, que l’on appelle des clés.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -281,6 +297,8 @@ Tip
 <p>Pour établir une communicatin sécurisée entre un ordinateur et un serveur, SSH utilise une clé dite privée et une clé dite publique. La clé privée doit rester sur l’ordinateur et ne surtout pas être partagée. La clé publique doit quant à elle être donnée au serveur. Une fois la clé privée, bien en sécurité sur l’ordinateur et la clé publique donnée à GitHub, la communication peut se faire de manière sécurisée.</p>
 </div>
 </div>
+<p>Les fichiers contenant les clés SSH sont généralement placés dans un dossier spécifique sur l’ordinateur, ce qui permet au système de les retrouver facilement.</p>
+<p>Chaque utilisateur possède son propre dossier de clés SSH nommé <code>.ssh</code> et placé à la racine du dossier personel de l’utilisateur. S’il n’existe pas encore c’est possible de le créer.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Linux</a></li></ul>
 <div class="tab-content">
@@ -292,24 +310,45 @@ Tip
 </div>
 </div>
 </div>
-<p>Pour générer un jeu de clés SSH (un clé privée et une clé publique), il suffit de lancer la commande suivante :</p>
+<p>Pour générer un jeu de clés SSH (une clé privée et une clé publique), il suffit de lancer la commande suivante :</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519</span></code><button title="Copier dans le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>On nous demande de spécifier un nom de fichier pour stocker ces clés. Comme les clés seront utilisées pour communiquer avec le compte GitHub d’Arsène, on va mettre <code>github_arsene_lupin</code>.</p>
 <p>Une fois le nom du fichier entré, on nous demande un mot de passe. C’est une sécurité permettant de protéger l’accès à la clé privée. Si l’on ne souhaite pas mettre de mot de passe, il suffit d’appuyer sur <code>Entrée</code>.</p>
 <p>Une fois toutes les étapes complétées, SSH a créé deux fichiers :</p>
 <ul>
-<li><p>la cla privée : <code>github_arsene_lupin</code></p></li>
+<li><p>la clé privée : <code>github_arsene_lupin</code> (à ne surtout pas partager)</p></li>
 <li><p>et la clé publique : <code>github_arsene_lupin.pub</code>.</p></li>
 </ul>
 <p>Tu peux ouvrir le fichier contenant la clé publique, à l’intérieur il doit y avoir quelque chose qui ressemble à ça :</p>
-<pre><code>ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICoyAUJwwKgKMrFgORyqSdEPqjYMYXwnDCDO59GCmYlV</code></pre>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>github_arsene_lupin.pub</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="github_arsene_lupin.pub"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ssh-ed25519</span> AAAAC3NzaC1lZDI1NTE5AAAAICoyAUJwwKgKMrFgORyqSdEPqjYMYXwnDCDO59GCmYlV</span></code><button title="Copier dans le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Pas d’inquiètude, ce n’est pas prévu pour être lu par des humains !</p>
-<p>Il ne nous reste maintenant qu’une seule étape : donner la clé publique à GitHub !</p>
-<p>Depuis ta page de profil GitHub, clique sur ton image de profile en haut à droite pour ouvrir le menu. Dans ce menu, clique sur <code>Settings</code>.</p>
-<p>Une fois dans le menu de configuration, clique sur <code>SSH and GPG keys</code>.</p>
-<p>Enfin, clique sur le bouton vert <code>New SSH key</code>.</p>
-<p>Tu peux alors entrer le titre de la clé dans la case <code>Title</code> (ce que tu mets n’as pas vraiment d’importance, c’est juste pour te souvenir de quel ordinateur est lié à cette clé) et copier la clé publique dans la case <code>Key</code>.</p>
-<p>Cliques enfin sur <code>Add SSH key</code> et voilà, c’est fini !</p>
+<p>Il ne nous reste maintenant qu’une seule étape : donner cette clé publique à GitHub !</p>
+</section>
+<section id="ajouter-une-clé-ssh-sur-github" class="level4">
+<h4 class="anchored" data-anchor-id="ajouter-une-clé-ssh-sur-github">Ajouter une clé SSH sur GitHub</h4>
+<p>On va installer une clé ssh sur le compte GitHub d’Arsène Lupin.</p>
+<p><img src="github_home.png" class="img-fluid"></p>
+<ol type="1">
+<li>Depuis ta page de profil GitHub, clique sur ton image de profile en haut à droite pour ouvrir le menu. Dans ce menu, clique sur <code>Settings</code>.</li>
+</ol>
+<p><img src="github_menu.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>Une fois dans le menu de configuration, clique sur <code>SSH and GPG keys</code>. Puis, clique sur le bouton vert <code>New SSH key</code>.</li>
+</ol>
+<p><img src="github_keys.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li>Tu peux alors entrer le titre de la clé dans la case <code>Title</code> (ce que tu mets n’as pas vraiment d’importance, c’est juste pour te souvenir de quel ordinateur est lié à cette clé) et copier la clé publique dans la case <code>Key</code>.</li>
+</ol>
+<p><img src="github_ssh.png" class="img-fluid"></p>
+<ol start="4" type="1">
+<li>Cliques enfin sur <code>Add SSH key</code> et voilà, c’est fini !</li>
+</ol>
+<p><img src="github_key_added.png" class="img-fluid"></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
