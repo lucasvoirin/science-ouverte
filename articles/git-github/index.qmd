@@ -71,8 +71,6 @@ On va ajouter quelques configurations au fichier `~/.gitconfig`
 
 - `git config --global init.defaultBranch main`
 
-- `git config --global core.editor "nvim -u NONE"`
-
 ### Quatrième étape : le dépôt distant
 
 #### Quéssé ça un dépôt distant ?!
